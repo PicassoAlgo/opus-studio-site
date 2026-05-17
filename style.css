@@ -28,6 +28,27 @@ html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 /* Fallback : si JS crash, tout reste visible */
 [data-anim] { opacity: 1; }
 
+/* Skip-link a11y (WCAG 2.4.1) — caché hors focus clavier */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 9999;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 1rem;
+  outline: 2px solid var(--accent-2);
+  outline-offset: 2px;
+}
+
 body {
   font-family: var(--font-body);
   font-weight: 400;

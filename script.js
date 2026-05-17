@@ -114,7 +114,21 @@
     });
   });
 
-  // ── 8. Refresh après chargement images (règle charter) ──
+  // ── 8. Image reveal : clip-path inset depuis le côté gauche.
+  //     Utilisé sur les cartes réalisations (4× dans realisations.html).
+  //     Sans ce handler, le data-anim restait visible mais sans anim. ──
+  document.querySelectorAll('[data-anim="image-reveal"]').forEach(function (el) {
+    gsap.set(el, { opacity: 1 });
+    gsap.from(el, {
+      scrollTrigger: { trigger: el, start: 'top 85%' },
+      clipPath: 'inset(0 100% 0 0)',
+      opacity: 0.4,
+      duration: 1.1,
+      ease: 'power3.out',
+    });
+  });
+
+  // ── 9. Refresh après chargement images (règle charter) ──
   window.addEventListener('load', function () { ScrollTrigger.refresh(); });
 
 })();

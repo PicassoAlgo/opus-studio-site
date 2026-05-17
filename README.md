@@ -3,8 +3,8 @@
 Site web vitrine d'Opus Studio (création de sites web premium pour PME suisses).
 Multi-pages, HTML/CSS/JS vanilla, charter Avdyl preset `tech-epure`, GSAP 3.13.
 
-> Livré le **2026-05-17** dans le cadre du Sprint E de la roadmap post-S4 (cf
-> `~/Dev/opus/RECAP_SESSION.md`).
+> Livré le **2026-05-17** dans le cadre du Sprint E de la roadmap post-S4.
+> V1.1 (audit a11y / og:image / hébergeur déclaré) livrée le **2026-05-20**.
 
 ---
 
@@ -21,6 +21,9 @@ opus-studio/
 ├── politique-confidentialite.html   # Conforme nLPD + RGPD (pas de cookies de tracking)
 ├── style.css                        # Preset tech-epure (charter Avdyl §3.2)
 ├── script.js                        # GSAP timeline immédiat hero + ScrollTrigger reveals
+├── assets/
+│   └── og.svg                       # Carte de partage social 1200×630 (Open Graph + Twitter)
+├── CNAME                            # studio.opus-ia.ch (custom domain GitHub Pages)
 ├── robots.txt
 ├── sitemap.xml
 └── README.md (ce fichier)
@@ -41,6 +44,7 @@ opus-studio/
 - `prefers-reduced-motion` respecté
 - Lighthouse cible : Performance ≥ 90, A11y = 100, SEO = 100
 - Menu burger natif < 900px, sticky mobile CTA
+- Skip-link a11y (WCAG 2.4.1) + landmark `<main>` sur les 7 pages
 
 ---
 
@@ -56,74 +60,60 @@ opus-studio/
 
 ---
 
-## ⚠️ Actions humaines pour mise en ligne
+## Déploiement (GitHub Pages — LIVE depuis 17 mai 2026)
 
-### 1. Créer le sous-domaine DNS `studio.opus-ia.ch`
+Le site est servi en statique par **GitHub Pages** depuis le repo dédié
+[`PicassoAlgo/opus-studio-site`](https://github.com/PicassoAlgo/opus-studio-site)
+(public). Custom domain `studio.opus-ia.ch` configuré via CNAME Infomaniak.
 
-Côté Infomaniak (manager de `opus-ia.ch`) :
-- Ajouter un enregistrement **CNAME** pour `studio` → `apex-loadbalancer.netlify.com.`
-- (Alternative A record si Netlify Apex : `75.2.60.5`)
-- Propagation DNS : 1-30 min en pratique.
+### Modifier + redéployer (workflow normal)
 
-### 2. Créer la mailbox `studio@opus-ia.ch`
+1. Éditer les fichiers HTML / CSS / JS dans ce dossier local.
+2. Tester localement : `python3 -m http.server 8080` puis `http://localhost:8080`.
+3. Push sur la branche `main` du repo `PicassoAlgo/opus-studio-site`.
+4. GitHub Pages rebuild auto (~10-30 s) — site live à `https://studio.opus-ia.ch/`.
 
-Côté Infomaniak Service Mail :
-- Créer une boîte `studio@opus-ia.ch` (ou un alias vers `contact@opus-ia.ch`).
-- Vérifier que les formulaires `mailto:studio@opus-ia.ch` arrivent bien.
+### Re-trigger build manuellement (si besoin)
 
-### 3. Déployer sur Netlify
+```bash
+gh api -X POST repos/PicassoAlgo/opus-studio-site/pages/builds
+gh api repos/PicassoAlgo/opus-studio-site/pages/builds/latest --jq '.status'
+```
 
-**Option A — drag & drop** (le plus simple pour la 1<sup>re</sup> mise en ligne) :
-1. Ouvrir [app.netlify.com](https://app.netlify.com) → bouton « Add new site » → « Deploy manually ».
-2. Zipper le dossier `opus-studio/` (ou drag & drop directement).
-3. Netlify donne une URL temporaire `*.netlify.app` — vérifier que tout marche.
-4. Settings → Domain management → ajouter le custom domain `studio.opus-ia.ch`.
-5. Activer le HTTPS Let's Encrypt automatique (Netlify le propose dès que le DNS pointe correctement).
+### Activer `https_enforced` (à faire UNE FOIS le cert Let's Encrypt prêt)
 
-**Option B — GitHub auto-deploy** (recommandé si tu pousses déjà sur `PicassoAlgo/opus-ia-v2`) :
-1. Sur Netlify → « Add new site » → « Import from Git ».
-2. Connecter le repo `PicassoAlgo/opus-ia-v2`.
-3. Build settings :
-   - Build command : *(laisser vide)*
-   - Publish directory : `sites-clients/opus-studio`
-4. Chaque push sur `main` redéploie automatiquement.
+```bash
+gh api -X PUT repos/PicassoAlgo/opus-studio-site/pages -F https_enforced=true
+```
 
-### 4. Tester avant communication
+Si l'API retourne « certificate does not exist yet », attendre encore 30 min – 24 h.
+GitHub provisionne le certificat asynchrone après la propagation DNS.
 
-- [ ] `studio.opus-ia.ch` charge sans erreur en HTTPS
-- [ ] Les 4 onglets nav (Services / Réalisations / Tarifs / Contact) fonctionnent
-- [ ] Le formulaire de contact ouvre bien le client mail vers `studio@opus-ia.ch`
-- [ ] Test mobile (iPhone) : hero visible, burger menu fonctionne, sticky CTA OK
-- [ ] Lighthouse > 90 sur les 4 axes (lancer un audit en navigation privée)
-- [ ] Test `prefers-reduced-motion` (System Preferences → Accessibility) → animations désactivées
+### Vérifier l'état HTTPS
+
+```bash
+curl -sI https://studio.opus-ia.ch/ | head -5
+```
+
+`HTTP/2 200` = OK. `SSL: no alternative certificate subject name` = cert pas encore prêt.
 
 ---
 
-## TODO post-livraison V1 (optionnels)
+## TODO post-V1.1 (optionnels)
 
-- [ ] **Vraie photo Avdyl** dans la section « Avdyl Bytyqi » de `contact.html` (actuellement pas d'image, sobre)
-- [ ] **Vraies captures d'écran** des 4 sites livrés en remplacement des Unsplash (`realisations.html`)
-- [ ] **og:image** dédiée (1200×630px) — actuellement pas d'image OG
+- [ ] **Vraie photo Avdyl** dans la section « Avdyl Bytyqi » de `contact.html`
+- [ ] **Vraies captures d'écran** des 4 sites livrés (remplacer Unsplash dans `realisations.html`)
 - [ ] **Favicon + apple-touch-icon** : à dropper dans `assets/`
-- [ ] **Image hero** custom (un mockup d'écran ou photo Avdyl au bureau) — actuellement gradient + grille seule
-- [ ] **Form backend** : remplacer le `mailto:` par Netlify Forms (gratuit, 100 submissions/mois) pour récupérer les leads sans dépendre du client mail
+- [ ] **Image hero** custom (mockup d'écran ou photo Avdyl au bureau)
+- [ ] **Form backend** : remplacer le `mailto:` par un endpoint serverless ou un service tiers EU (Formspree EU, Tally…) pour récupérer les leads sans dépendre du client mail
 - [ ] **Plausible Analytics** ou équivalent EU-respectueux (optionnel)
-
----
-
-## Pour modifier le site
-
-1. Éditer directement les fichiers HTML / CSS / JS — pas de compilation.
-2. Tester en local : `python3 -m http.server 8080` dans le dossier `opus-studio/`, puis `http://localhost:8080`.
-3. Push sur la branche `main` du repo → Netlify redéploie automatiquement (si Option B activée).
-
-Les fichiers étant statiques, le déploiement prend généralement < 30 secondes.
 
 ---
 
 ## Crédits
 
 - Conception, design, code : **Avdyl Bytyqi** (Opus Studio) avec l'assistance de Claude Code.
+- Hébergement : GitHub Pages (GitHub Inc. / Microsoft Corp.) + DNS Infomaniak.
 - Images placeholder : [Unsplash](https://unsplash.com) (licence libre).
 - Polices : Google Fonts `Space Grotesk` + `Inter`.
 - Bibliothèques : GSAP 3.13 (licence club GreenSock — gratuit pour usage interne).
