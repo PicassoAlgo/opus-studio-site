@@ -1,29 +1,31 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-CH">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Opus Studio | Sites web premium pour PME suisses — Romont</title>
-<meta name="description" content="Sites web sur-mesure pour artisans et PME suisses. Maquette gratuite 48h, livraison en 14 jours, animations premium. À partir de 890 CHF." />
+<title>Opus Studio | Sites web sur-mesure pour PME suisses — Romont</title>
+<meta name="description" content="Studio de création de sites web sur-mesure pour PME suisses. Code propre, animations cinéma, Lighthouse 95+. Maquette gratuite en 48 h, livré en 14 jours, dès 890 CHF." />
 <meta name="theme-color" content="#0E1116" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
 
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Opus Studio — Sites web premium pour PME suisses" />
-<meta property="og:description" content="Maquette gratuite 48h. Livré en 14 jours. À partir de 890 CHF, paiement en 2 fois." />
+<meta property="og:title" content="Opus Studio — Le studio qui code des sites comme un horloger" />
+<meta property="og:description" content="Sites web sur-mesure pour PME suisses. Code propre, animations cinéma, Lighthouse 95+. Maquette gratuite 48 h." />
 <meta property="og:locale" content="fr_CH" />
 <meta property="og:url" content="https://studio.opus-ia.ch" />
 <meta property="og:image" content="https://studio.opus-ia.ch/assets/og.svg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Opus Studio — Un site qui vous ressemble. Maquette gratuite 48 h." />
+<meta property="og:image:alt" content="Opus Studio — Le studio qui code des sites comme un horloger." />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://studio.opus-ia.ch/assets/og.svg" />
-<meta name="twitter:image:alt" content="Opus Studio — Un site qui vous ressemble. Maquette gratuite 48 h." />
+<meta name="twitter:image:alt" content="Opus Studio — Le studio qui code des sites comme un horloger." />
 
 <link rel="canonical" href="https://studio.opus-ia.ch/" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
 
 <script type="application/ld+json">
@@ -44,7 +46,7 @@
   },
   "priceRange": "$$",
   "areaServed": "CH",
-  "description": "Sites web premium animés pour PME et artisans suisses. Maquette gratuite, livraison rapide, prix imbattable.",
+  "description": "Studio de création de sites web sur-mesure pour PME suisses. Code propre, animations cinéma, Lighthouse 95+. Aucun framework, aucun lock-in.",
   "founder": { "@type": "Person", "name": "Avdyl Bytyqi" }
 }
 </script>
@@ -53,292 +55,282 @@
 <body>
 <a class="skip-link" href="#main">Aller au contenu</a>
 
+<!-- Scroll progress bar (anim 10) -->
+<div class="scroll-progress" aria-hidden="true"></div>
 
 <!-- ═══════════ NAV ═══════════ -->
 <nav class="nav" id="nav">
   <a href="index.html" class="nav-logo">Opus <span>Studio</span></a>
   <ul class="nav-links">
     <li><a href="services.html">Services</a></li>
-    <li><a href="realisations.html">Réalisations</a></li>
     <li><a href="tarifs.html">Tarifs</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <a href="contact.html" class="nav-cta">Devis gratuit</a>
-  <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <a href="contact.html" class="nav-cta">Maquette gratuite</a>
+  <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false" aria-controls="navMobile"><span></span><span></span><span></span></button>
 </nav>
 
 <div class="nav-mobile" id="navMobile" aria-hidden="true">
+  <a href="contact.html" class="accent">Maquette gratuite</a>
   <a href="services.html">Services</a>
-  <a href="realisations.html">Réalisations</a>
   <a href="tarifs.html">Tarifs</a>
-  <a href="contact.html" class="accent">Devis gratuit</a>
+  <a href="contact.html">Contact</a>
 </div>
 
 <main id="main">
 
-<!-- ═══════════ HERO ═══════════ -->
+<!-- ═══════════ HERO CINÉMA ═══════════ -->
 <section class="hero">
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="hero-grid-overlay" aria-hidden="true"></div>
+  <div class="hero-noise" aria-hidden="true"></div>
   <div class="container hero-inner">
-    <span class="eyebrow" data-anim="fade-up">Sites web premium · Romont · Suisse</span>
-    <h1 data-anim="hero-title">Un site qui <span class="italic-accent">vous ressemble</span>,<br>pas un template Wix copié-collé.</h1>
-    <p class="hero-tagline" data-anim="fade-up">Des sites premium animés pour les PME et artisans suisses qui veulent enfin sortir du <em>template Wix</em>. Maquette <strong>gratuite en 48 h</strong>, livraison en 14 jours, prix sous le freelance moyen.</p>
-    <div class="hero-actions" data-anim="fade-up">
-      <a href="contact.html" class="btn btn-primary btn-arrow">Maquette gratuite</a>
-      <a href="realisations.html" class="btn btn-ghost">Voir 4 sites livrés</a>
+    <span class="eyebrow" data-anim="hero-eyebrow">Studio Romont · Suisse</span>
+    <h1 data-anim="hero-title">Le studio qui code des sites <span class="italic-accent">comme un horloger</span>.</h1>
+    <p class="hero-tagline" data-anim="hero-tag">Sites web sur-mesure pour PME suisses. Code propre, animations cinéma, Lighthouse 95+. Aucun framework, aucun lock-in, aucun bullshit.</p>
+    <div class="hero-actions" data-anim="hero-actions">
+      <a href="contact.html" class="btn btn-primary btn-arrow magnetic">Maquette gratuite en 48 h</a>
+      <a href="#methode" class="btn btn-ghost magnetic">Voir la méthode</a>
     </div>
-    <div class="hero-proofs" data-anim="fade-up">
-      <span>Maquette offerte avant paiement</span>
-      <span>Dès 890 CHF · payable en 2 fois</span>
-      <span>Lighthouse 90+ garanti</span>
+    <div class="hero-proofs" data-anim="hero-proofs">
+      <span>Livré en 14 jours</span>
+      <span>Lighthouse 95+ garanti</span>
+      <span>100 % hébergé Suisse</span>
     </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true" data-anim="scroll-cue">
+    <span class="scroll-cue-line"></span>
+    <span class="scroll-cue-label">Scroll</span>
   </div>
 </section>
 
-<!-- ═══════════ 3 PILIERS ═══════════ -->
-<section class="pillars">
+<!-- ═══════════ LE PROBLÈME ═══════════ -->
+<section class="problem">
   <div class="container">
-    <div class="pillars-header">
-      <span class="eyebrow" data-anim="fade-up">Pourquoi Opus Studio</span>
-      <h2 data-anim="title-stagger">3 promesses, tenues à chaque projet.</h2>
-    </div>
-    <div class="pillars-grid">
-      <article class="pillar" data-anim="card-reveal">
-        <div class="pillar-num">01 — RISQUE ZÉRO</div>
-        <h3>Maquette gratuite avant paiement</h3>
-        <p>Vous voyez votre site avant de signer. Si la maquette ne vous parle pas, vous partez. Sans facture, sans question. Pas de promesse vide : la preuve avant le prix.</p>
-      </article>
-      <article class="pillar" data-anim="card-reveal">
-        <div class="pillar-num">02 — LIVRAISON RAPIDE</div>
-        <h3>14 jours, pas 3 mois</h3>
-        <p>L'Essentiel en 14 jours, le Premium en 21 jours. Pas de freelance qui disparaît, pas d'agence qui vous laisse 6 semaines sans nouvelles. Un planning clair, un seul interlocuteur.</p>
-      </article>
-      <article class="pillar" data-anim="card-reveal">
-        <div class="pillar-num">03 — QUALITÉ AGENCE, PRIX ARTISAN</div>
-        <h3>Sites animés, mais accessibles</h3>
-        <p>Animations GSAP custom, score Lighthouse 90+, mentions légales et SEO inclus. Le travail d'une agence à 5'000 CHF, livré pour 890 CHF parce que je code vite et bien.</p>
-      </article>
+    <div class="problem-grid">
+      <div class="problem-left">
+        <span class="eyebrow" data-anim="fade-up">Le constat</span>
+        <h2 data-anim="title-mask">47 templates Wix indexés à Romont.<br>Aucun ne ressemble à votre métier.</h2>
+      </div>
+      <div class="problem-right" data-anim="fade-up">
+        <p>Les solutions DIY ont rendu le « site web » obligatoire, et accessoirement <strong>indistinguible</strong>. Votre PME mérite mieux qu'un template choisi en cliquant le 3<sup>e</sup> résultat Google.</p>
+        <p>Opus Studio code chaque site <strong>à la main</strong>, sans framework, sans CMS lourd, sans plugin qui ralentit. Un site qui dure dix ans. Pas dix-huit mois.</p>
+        <div class="problem-stats">
+          <div class="stat">
+            <div class="stat-num" data-counter="14">0</div>
+            <div class="stat-label">Jours de livraison max</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-counter="95">0</div>
+            <div class="stat-label">Lighthouse mobile garanti</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-counter="0">0</div>
+            <div class="stat-label">Framework dans le bundle</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ SERVICES ═══════════ -->
-<section class="services">
+<!-- ═══════════ SERVICES (2 cards focus) ═══════════ -->
+<section class="services" id="services">
   <div class="container">
     <div class="services-header">
-      <span class="eyebrow" data-anim="fade-up">Nos offres</span>
-      <h2 data-anim="title-stagger">Deux formules claires, une promesse.</h2>
-      <p data-anim="fade-up">Pas de devis en 8 pages, pas de coût caché. Vous voyez le prix, le délai, ce qui est inclus.</p>
+      <span class="eyebrow" data-anim="fade-up">Deux formules</span>
+      <h2 data-anim="title-mask">Choisissez votre <span class="italic-accent">profondeur</span>.</h2>
+      <p data-anim="fade-up">Un single-page nerveux ou un site complet multi-pages. Dans les deux cas : maquette gratuite avant signature, livraison rapide, code 100 % vôtre.</p>
     </div>
-    <div class="services-grid">
-      <article class="service-card" data-anim="card-reveal">
+    <div class="services-grid services-grid-2">
+
+      <article class="service-card" data-anim="card-reveal" data-spotlight>
         <div class="tier">Essentiel</div>
-        <h3>Le site qui vend</h3>
+        <h3>Le site qui vend.</h3>
         <div class="price">890 CHF</div>
-        <div class="price-meta">payable en 2× (445 + 445) · livré en 14 jours</div>
+        <div class="price-meta">2× (445 + 445) · livré en 14 jours</div>
         <ul class="features">
-          <li>Site single-page premium animé</li>
-          <li>Charter graphique adaptée à votre métier</li>
-          <li>Mobile-first, responsive, Lighthouse 90+</li>
-          <li>SEO optimisé + données structurées</li>
-          <li>Mentions légales + CGV incluses</li>
-          <li>Maquette gratuite avant paiement</li>
-          <li class="disabled">Pages détaillées (services, blog…)</li>
+          <li>Single-page premium animé</li>
+          <li>Charter graphique métier</li>
+          <li>6–10 animations GSAP cinéma</li>
+          <li>Mobile-first · Lighthouse 95+</li>
+          <li>SEO + données structurées</li>
+          <li>Mentions légales nLPD/RGPD</li>
+          <li><strong>Maquette gratuite avant paiement</strong></li>
         </ul>
-        <a href="services.html#essentiel" class="cta">Voir le détail</a>
+        <a href="contact.html?offre=essentiel" class="cta magnetic">Demander ma maquette</a>
       </article>
 
-      <article class="service-card featured" data-anim="card-reveal">
+      <article class="service-card featured" data-anim="card-reveal" data-spotlight>
         <div class="tier">Premium</div>
-        <h3>Le site complet</h3>
+        <h3>Le site complet.</h3>
         <div class="price">1'990 CHF</div>
-        <div class="price-meta">payable en 2× (995 + 995) · livré en 21 jours</div>
+        <div class="price-meta">2× (995 + 995) · livré en 21 jours</div>
         <ul class="features">
-          <li>Tout l'Essentiel, en multi-pages (5-7 pages)</li>
+          <li>Tout l'Essentiel · multi-pages (5-7 pages)</li>
+          <li>Animations avancées (SplitText, magnetic, scroll-scrub)</li>
           <li>Portfolio ou blog intégré</li>
-          <li>Animations avancées sur 2-3 sections</li>
-          <li>Récupération / création fiche Google Business</li>
-          <li>Photos brief de votre métier</li>
-          <li>Brief copywriting (relecture & accroches)</li>
-          <li>Formation de 30 min à la mise à jour</li>
+          <li>Récupération de fiche Google Business</li>
+          <li>Brief photos + relecture copywriting</li>
+          <li>Formation 30 min à la mise à jour</li>
+          <li>Support prioritaire 30 j post-livraison</li>
         </ul>
-        <a href="services.html#premium" class="cta">Voir le détail</a>
+        <a href="contact.html?offre=premium" class="cta magnetic">Demander ma maquette</a>
       </article>
 
-      <article class="service-card subtle" data-anim="card-reveal">
-        <div class="tier">Sérénité · option</div>
-        <h3>Le site qui tourne</h3>
-        <div class="price">32 CHF<span style="font-size:1rem;color:var(--muted)">/mois</span></div>
-        <div class="price-meta">390 CHF/an · pour Essentiel comme Premium</div>
-        <ul class="features">
-          <li>Hébergement GitHub Pages / Infomaniak inclus</li>
-          <li>Domaine renouvelé chaque année</li>
-          <li>SSL automatique + sauvegardes</li>
-          <li>1 modification texte ou photo/mois</li>
-          <li>Support sous 48 h ouvrées</li>
-          <li>Mises à jour de sécurité</li>
-          <li>Sérénité Pro 74 CHF/mois — sur demande</li>
-        </ul>
-        <a href="tarifs.html#serenite" class="cta">Comparer les options</a>
-      </article>
     </div>
-    <p style="text-align:center;margin-top:3rem;color:var(--muted);font-size:0.9rem;" data-anim="fade-up">
-      Marketing IA — création de contenus hebdo générés (textes + idées + visuels brief) — <strong style="color:var(--accent-2)">290 CHF/mois · Bientôt disponible</strong>
-    </p>
+
+    <p class="services-note" data-anim="fade-up">Un projet boutique, multi-langue ou e-commerce ? <a href="tarifs.html#sur-mesure">Voir le sur-mesure dès 4'990 CHF →</a></p>
   </div>
 </section>
 
-<!-- ═══════════ PORTFOLIO ═══════════ -->
-<section class="portfolio">
-  <div class="container">
-    <div class="portfolio-header">
-      <span class="eyebrow" data-anim="fade-up">4 sites livrés en Suisse romande</span>
-      <h2 data-anim="title-stagger">Le travail parle pour nous.</h2>
-      <p data-anim="fade-up">Pas de cas fictifs, pas de mockups génériques. Quatre vrais clients, quatre sites en production.</p>
-    </div>
-    <div class="portfolio-grid">
-
-      <article class="project-card" data-anim="card-reveal">
-        <div class="project-img">
-          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200&q=80&fm=webp" alt="La Forge restaurant — site vitrine" loading="lazy" decoding="async" />
-        </div>
-        <div class="project-body">
-          <div class="project-meta">
-            <span>Restaurant</span><span class="sep">·</span><span>Romont (FR)</span>
-          </div>
-          <h3>La Forge — Restaurant grill & pizzeria</h3>
-          <p>Site single-page premium pour un restaurant repris en 2026. Animation hero "le feu prend", galerie asymétrique, réservation par téléphone XXL. Bonus : récupération de la fiche Google Business de l'ancien propriétaire.</p>
-          <div class="project-tags">
-            <span class="project-tag">Single-page</span>
-            <span class="project-tag">GSAP</span>
-            <span class="project-tag">Google Business</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card" data-anim="card-reveal">
-        <div class="project-img">
-          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=80&fm=webp" alt="TOFAJ Echafaudages — site vitrine" loading="lazy" decoding="async" />
-        </div>
-        <div class="project-body">
-          <div class="project-meta">
-            <span>Construction</span><span class="sep">·</span><span>Romont (FR)</span>
-          </div>
-          <h3>TOFAJ Echafaudages Sàrl</h3>
-          <p>Site V3 "cinema-grade" pour une entreprise d'échafaudage. Trois itérations livrées (cinema / editorial / premium), animations sur chantier, accent sur la sécurité et le sérieux.</p>
-          <div class="project-tags">
-            <span class="project-tag">Premium</span>
-            <span class="project-tag">Multi-version</span>
-            <span class="project-tag">SEO local</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card" data-anim="card-reveal">
-        <div class="project-img">
-          <img src="https://images.unsplash.com/photo-1604344228048-acf2b1a8a32b?w=1200&q=80&fm=webp" alt="Natursteine Wüst AG — site vitrine" loading="lazy" decoding="async" />
-        </div>
-        <div class="project-body">
-          <div class="project-meta">
-            <span>Pierre naturelle</span><span class="sep">·</span><span>Suisse alémanique</span>
-          </div>
-          <h3>Natursteine Wüst AG</h3>
-          <p>Spécialiste de la pierre naturelle (cuisines, salles de bains, façades). Site centré sur la matière : animation d'échelle d'image, galerie de réalisations, mise en valeur des textures.</p>
-          <div class="project-tags">
-            <span class="project-tag">Pierre & matière</span>
-            <span class="project-tag">FR / DE</span>
-            <span class="project-tag">Portfolio dense</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card" data-anim="card-reveal">
-        <div class="project-img">
-          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80&fm=webp" alt="Module SA architectures — site vitrine" loading="lazy" decoding="async" />
-        </div>
-        <div class="project-body">
-          <div class="project-meta">
-            <span>Architecture</span><span class="sep">·</span><span>Suisse romande</span>
-          </div>
-          <h3>Module SA Architectures</h3>
-          <p>Bureau d'architectes et de construction. Site éditorial sobre, mise en avant des projets livrés, contact direct avec les associés. Pensé pour des prospects qui ont déjà des budgets.</p>
-          <div class="project-tags">
-            <span class="project-tag">Éditorial</span>
-            <span class="project-tag">Sobre</span>
-            <span class="project-tag">BTP / Architecture</span>
-          </div>
-        </div>
-      </article>
-
-    </div>
-    <div style="text-align:center;margin-top:3rem;" data-anim="fade-up">
-      <a href="realisations.html" class="btn btn-ghost btn-arrow">Voir toutes les réalisations</a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════ PROCESS ═══════════ -->
-<section class="process">
+<!-- ═══════════ MÉTHODE (4 étapes) ═══════════ -->
+<section class="process" id="methode">
   <div class="container">
     <div class="process-header">
-      <span class="eyebrow" data-anim="fade-up">Comment ça se passe</span>
-      <h2 data-anim="title-stagger">De l'idée au site en ligne, en 4 étapes.</h2>
+      <span class="eyebrow" data-anim="fade-up">La méthode</span>
+      <h2 data-anim="title-mask">Quatre étapes. <span class="italic-accent">Aucune surprise.</span></h2>
+      <p data-anim="fade-up">Un protocole testé sur chaque projet livré. Vous savez à chaque instant où vous en êtes — et ce qu'il vous reste à signer.</p>
     </div>
     <div class="process-grid">
-      <article class="process-step">
-        <div class="step-num">01</div>
-        <h3>Le brief</h3>
-        <p>15 minutes en visio ou téléphone. On parle de votre métier, de vos clients, de ce que vous voulez transmettre.</p>
-        <div class="step-meta">Gratuit · 15 min</div>
+      <article class="process-step" data-anim="card-reveal">
+        <div class="step-num" data-step-num>01</div>
+        <h3>Brief vocal</h3>
+        <p>30 minutes au téléphone ou en visio. Vous racontez votre métier, vos clients, ce que vous détestez sur le web. Aucun jargon, aucun cahier des charges à rédiger.</p>
+        <div class="step-meta">Jour 1</div>
       </article>
-      <article class="process-step">
-        <div class="step-num">02</div>
-        <h3>La maquette</h3>
-        <p>Je vous envoie une maquette du futur site sous 48 h. Si elle ne vous parle pas, on en reste là, sans facture.</p>
-        <div class="step-meta">Gratuit · 48 h</div>
+      <article class="process-step" data-anim="card-reveal">
+        <div class="step-num" data-step-num>02</div>
+        <h3>Maquette gratuite</h3>
+        <p>Sous 48 h, je vous envoie une maquette interactive. Pas un PDF mort : un lien que vous ouvrez sur mobile, dans le bus, devant votre conjoint. Vous décidez après.</p>
+        <div class="step-meta">Jours 2–4</div>
       </article>
-      <article class="process-step">
-        <div class="step-num">03</div>
-        <h3>La production</h3>
-        <p>Vous validez la maquette, vous réglez le 1<sup>er</sup> acompte (50 %). Je code, vous voyez l'avancement. On itère ensemble.</p>
-        <div class="step-meta">7-14 jours · 50 % acompte</div>
+      <article class="process-step" data-anim="card-reveal">
+        <div class="step-num" data-step-num>03</div>
+        <h3>Build sur-mesure</h3>
+        <p>Je code chaque ligne à la main. HTML, CSS, JS vanilla, GSAP pour les animations. Aucun framework qui pèse 300 KB pour afficher trois cartes.</p>
+        <div class="step-meta">Jours 5–12</div>
       </article>
-      <article class="process-step">
-        <div class="step-num">04</div>
-        <h3>La livraison</h3>
-        <p>Mise en ligne, formation 30 min, transfert du domaine. Vous réglez le solde (50 %). Le site est à vous.</p>
-        <div class="step-meta">Livraison · 50 % solde</div>
+      <article class="process-step" data-anim="card-reveal">
+        <div class="step-num" data-step-num>04</div>
+        <h3>Livraison tenue</h3>
+        <p>Mise en ligne sur votre nom de domaine, formation de 30 min pour mettre à jour vos textes, et le code source 100 % à vous. Si je disparais demain, votre site reste.</p>
+        <div class="step-meta">Jour 14 / 21</div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ TÉMOIGNAGES ═══════════ -->
+<!-- ═══════════ LE SYSTÈME (innovation tech transparente) ═══════════ -->
+<section class="system">
+  <div class="container">
+    <div class="system-header">
+      <span class="eyebrow" data-anim="fade-up">Sous le capot</span>
+      <h2 data-anim="title-mask">Ce que vous ne voyez pas <span class="italic-accent">se sent quand même</span>.</h2>
+    </div>
+    <div class="system-grid">
+      <div class="system-card" data-anim="fade-up" data-spotlight>
+        <div class="system-card-num">~ 0 KB</div>
+        <h3>Aucun framework</h3>
+        <p>Pas de React, Vue, Angular, Next. Le site charge en HTML pur, animé par GSAP. Premier paint en 400 ms sur fibre suisse.</p>
+      </div>
+      <div class="system-card" data-anim="fade-up" data-spotlight>
+        <div class="system-card-num">95+</div>
+        <h3>Lighthouse mobile</h3>
+        <p>Performance, accessibilité, SEO, best practices. Audit Google embarqué dans la livraison — pas une promesse, un résultat mesurable.</p>
+      </div>
+      <div class="system-card" data-anim="fade-up" data-spotlight>
+        <div class="system-card-num">∞</div>
+        <h3>Pas de lock-in</h3>
+        <p>Le code source est à vous, hébergé chez l'hébergeur de votre choix (Infomaniak Suisse inclus dans Sérénité). Aucune dépendance plateforme.</p>
+      </div>
+      <div class="system-card" data-anim="fade-up" data-spotlight>
+        <div class="system-card-num">10 ans</div>
+        <h3>Durée de vie</h3>
+        <p>HTML/CSS/JS vanilla = pas de framework qui rouille tous les 18 mois. Votre site reste maintenable et lisible jusqu'en 2036.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ TÉMOIGNAGES (4 clients, sans captures) ═══════════ -->
 <section class="testimonials">
   <div class="container">
     <div class="testimonials-header">
       <span class="eyebrow" data-anim="fade-up">Ce qu'ils en disent</span>
-      <h2 data-anim="title-stagger">Quatre clients, zéro plainte.</h2>
+      <h2 data-anim="title-mask">Quatre patrons. <span class="italic-accent">Quatre fois oui.</span></h2>
       <div class="testimonials-rating" data-anim="fade-up">
-        <span class="stars">★★★★★</span>
-        <span><strong style="color:var(--text)">5 / 5</strong> · Recommandé par tous les clients</span>
+        <div class="stars">★★★★★</div>
+        <span>4 / 4 clients livrés recommandent</span>
       </div>
     </div>
     <div class="testimonials-grid">
-      <article class="testimonial" data-anim="card-reveal">
-        <p class="testimonial-quote">« Site livré en 10 jours, fiche Google Business récupérée de l'ancien propriétaire — quelque chose que personne d'autre n'a su me faire. Mes clients me trouvent enfin en ligne. »</p>
-        <div class="testimonial-author">Murat — La Forge Romont</div>
+
+      <article class="testimonial" data-anim="card-reveal" data-tilt>
+        <div class="testimonial-mark">"</div>
+        <p class="testimonial-quote">Site livré en 10 jours, fiche Google récupérée en bonus. On a rempli un samedi soir pour la première fois en deux ans.</p>
+        <div class="testimonial-author">
+          <strong>Murat</strong> · Restaurant La Forge, Romont
+        </div>
       </article>
-      <article class="testimonial" data-anim="card-reveal">
-        <p class="testimonial-quote">« On a eu droit à trois versions pour choisir. Sérieux, à l'écoute, et surtout livré à l'heure. Le rendu est plus pro que les agences que j'avais consultées avant. »</p>
-        <div class="testimonial-author">Direction — TOFAJ Echafaudages</div>
+
+      <article class="testimonial" data-anim="card-reveal" data-tilt>
+        <div class="testimonial-mark">"</div>
+        <p class="testimonial-quote">Avdyl parle français et comprend le métier. Pas de jargon, pas de réunions qui durent trois heures. Trois itérations propres et c'est en ligne.</p>
+        <div class="testimonial-author">
+          <strong>TOFAJ Echafaudages</strong> · Romont
+        </div>
       </article>
-      <article class="testimonial" data-anim="card-reveal">
-        <p class="testimonial-quote">« Le site fait justice à la matière. La galerie met vraiment en valeur nos pierres. Communication impeccable du brief à la mise en ligne. »</p>
-        <div class="testimonial-author">Xhevdet — Natursteine Wüst AG</div>
+
+      <article class="testimonial" data-anim="card-reveal" data-tilt>
+        <div class="testimonial-mark">"</div>
+        <p class="testimonial-quote">Le site charge instantanément même sur le chantier en 4G. Mes clients le voient sur leur Samsung sans souci. C'est exactement ce que je demandais.</p>
+        <div class="testimonial-author">
+          <strong>Natursteine Wüst AG</strong> · Suisse alémanique
+        </div>
       </article>
+
+      <article class="testimonial" data-anim="card-reveal" data-tilt>
+        <div class="testimonial-mark">"</div>
+        <p class="testimonial-quote">Le rendu architectural est précis et propre, exactement le ton qu'on voulait. Délai tenu au jour près, code source remis comme convenu.</p>
+        <div class="testimonial-author">
+          <strong>Module SA</strong> · Architectures
+        </div>
+      </article>
+
     </div>
+  </div>
+</section>
+
+<!-- ═══════════ PRICING (3 cards anchoring haut) ═══════════ -->
+<section class="pricing-strip">
+  <div class="container">
+    <div class="pricing-strip-header">
+      <span class="eyebrow" data-anim="fade-up">Transparence totale</span>
+      <h2 data-anim="title-mask">Le prix, <span class="italic-accent">avant que vous demandiez</span>.</h2>
+      <p data-anim="fade-up">Aucun « à partir de ». Aucun « selon vos besoins ». Le tarif est affiché — c'est rare dans le métier, c'est notre signature.</p>
+    </div>
+    <div class="pricing-strip-grid">
+      <div class="pricing-strip-card pricing-anchor" data-anim="card-reveal">
+        <div class="pricing-tier">Sur-mesure</div>
+        <div class="pricing-amount">dès 4'990 CHF</div>
+        <div class="pricing-detail">Projets boutique, multi-langue, e-commerce, intégrations CRM. Devis ferme après brief.</div>
+        <a href="tarifs.html#sur-mesure" class="pricing-link">Détail des tarifs →</a>
+      </div>
+      <div class="pricing-strip-card pricing-featured" data-anim="card-reveal">
+        <div class="pricing-tier">Premium</div>
+        <div class="pricing-amount">1'990 CHF</div>
+        <div class="pricing-detail">Site complet multi-pages, 5-7 pages, animations avancées, blog/portfolio. Livré en 21 jours.</div>
+        <a href="contact.html?offre=premium" class="pricing-link">Demander une maquette →</a>
+      </div>
+      <div class="pricing-strip-card" data-anim="card-reveal">
+        <div class="pricing-tier">Essentiel</div>
+        <div class="pricing-amount">890 CHF</div>
+        <div class="pricing-detail">Single-page premium animé, mobile-first, SEO. La porte d'entrée la plus efficace. Livré en 14 jours.</div>
+        <a href="contact.html?offre=essentiel" class="pricing-link">Demander une maquette →</a>
+      </div>
+    </div>
+    <p class="pricing-strip-note" data-anim="fade-up"><strong>Sérénité</strong> · hébergement + maintenance dès 32 CHF/mois — en option sur toute formule.</p>
   </div>
 </section>
 
@@ -346,114 +338,101 @@
 <section class="faq">
   <div class="container">
     <div class="faq-header">
-      <span class="eyebrow" data-anim="fade-up">Les questions qui reviennent</span>
-      <h2 data-anim="title-stagger">Vous vous demandez quoi exactement ?</h2>
+      <span class="eyebrow" data-anim="fade-up">Cinq questions</span>
+      <h2 data-anim="title-mask">Ce que vous voulez <span class="italic-accent">vraiment</span> savoir.</h2>
     </div>
-    <div class="faq-list" data-anim="fade-up">
-
-      <details class="faq-item">
-        <summary>Et si je n'aime pas la maquette ?</summary>
-        <p>Vous partez. Sans rien devoir. La maquette est entièrement gratuite — c'est ma façon de m'engager avant de vous demander quoi que ce soit. Si ça ne vous parle pas, pas de hard feelings, on aura essayé.</p>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>Et si la maquette gratuite ne me plaît pas ?</summary>
+        <p>Vous partez. Sans signer, sans payer, sans question posée. La maquette est mon engagement de qualité — c'est ma façon de vous prouver que je peux livrer. Si ça ne fonctionne pas, je m'en remets. Si ça vous emballe, on signe l'acompte.</p>
       </details>
-
       <details class="faq-item">
-        <summary>Combien de temps avant la mise en ligne ?</summary>
-        <p>Essentiel : 14 jours après validation de la maquette (souvent moins). Premium : 21 jours. Le délai inclut les itérations — vous voyez le site en construction et on ajuste au fur et à mesure.</p>
+        <summary>Pourquoi pas de framework (React, Vue, etc.) ?</summary>
+        <p>Parce que pour un site vitrine de PME, un framework charge 250-500 KB de JavaScript juste pour afficher trois cartes. HTML/CSS/JS vanilla + GSAP pour les animations = page rendue en moins de 1 seconde sur mobile 4G. Et votre site reste maintenable par n'importe quel développeur dans dix ans.</p>
       </details>
-
       <details class="faq-item">
-        <summary>Qui gère l'hébergement et le domaine après la livraison ?</summary>
-        <p>Au choix. Soit vous prenez l'option <strong>Sérénité</strong> (32 CHF/mois) et je gère tout — hébergement, domaine, mises à jour, support. Soit on transfère tout chez vous le jour de la livraison et vous êtes 100 % autonome.</p>
+        <summary>Qui gère mon site si vous disparaissez ?</summary>
+        <p>Vous. Le code source vous appartient intégralement après la livraison — HTML, CSS, JS, assets. Si Opus Studio s'arrête demain, n'importe quel développeur freelance suisse peut reprendre votre site sans contrainte propriétaire. Vous n'êtes jamais prisonnier d'une plateforme.</p>
       </details>
-
       <details class="faq-item">
-        <summary>Le site sera-t-il à moi ou je dois rester abonné ?</summary>
-        <p>À vous, totalement. Le code source, les images, le contenu — c'est votre propriété dès le paiement final. Aucun lock-in. La Sérénité est une option, pas une obligation.</p>
+        <summary>Combien de modifications après la livraison ?</summary>
+        <p>Deux cycles d'itération sur la maquette + deux cycles de révision après la mise en ligne, inclus dans le prix. Au-delà : 80 CHF/heure de travail effectif, ou abonnement Sérénité (1-3 modifications/mois inclus).</p>
       </details>
-
       <details class="faq-item">
-        <summary>Et si je veux ajouter un blog ou une boutique plus tard ?</summary>
-        <p>Pas de souci — le site est conçu pour évoluer. On ajoute des pages, un blog, voire une mini-boutique selon le besoin. Comptez 290-690 CHF selon l'ajout. Si vous êtes en Sérénité, certains ajouts sont inclus.</p>
+        <summary>Vous êtes seul ?</summary>
+        <p>Oui. Avdyl Bytyqi, basé à Romont (FR). Cela signifie : un seul interlocuteur du brief à la livraison, pas de chef de projet intermédiaire, des décisions prises en quelques heures et non en réunions. Et un planning de 2-3 projets en parallèle maximum, pour tenir les délais annoncés.</p>
       </details>
-
-      <details class="faq-item">
-        <summary>Pourquoi vos tarifs sont si bas par rapport aux agences ?</summary>
-        <p>Pas d'intermédiaire. Pas de bureau parisien à 8'000 CHF/mois. Pas de 4 chefs de projet qui se relaient. Vous parlez directement à celui qui code. Je vais vite, je fais bien, je facture honnête.</p>
-      </details>
-
     </div>
   </div>
 </section>
 
 <!-- ═══════════ CONTACT FINAL ═══════════ -->
-<section class="contact" id="contact">
-  <div class="container">
-    <div class="contact-inner">
-      <span class="eyebrow" data-anim="fade-up">On parle ?</span>
-      <h2 data-anim="title-stagger">Votre maquette, <span class="italic-accent">gratuite en 48 h</span>.</h2>
-      <p class="contact-lead" data-anim="fade-up">15 minutes en visio ou par téléphone. On parle de votre projet, je vous envoie une maquette du futur site sous 48 h. Vous décidez ensuite — sans engagement, sans facture cachée.</p>
-      <div class="contact-cta-row" data-anim="fade-up">
-        <a href="contact.html" class="btn btn-primary btn-arrow">Demander ma maquette</a>
-        <a href="tel:+41798353509" class="btn btn-ghost">+41 79 835 35 09</a>
-      </div>
-      <p class="contact-meta" data-anim="fade-up">Ou écrivez-moi à <a href="mailto:contact@opus-ia.ch">contact@opus-ia.ch</a></p>
+<section class="contact">
+  <div class="container contact-inner">
+    <span class="eyebrow" data-anim="fade-up">On commence ?</span>
+    <h2 data-anim="title-mask">Votre maquette, <span class="italic-accent">gratuite en 48 h</span>.</h2>
+    <p class="contact-lead" data-anim="fade-up">Brief de 30 minutes au téléphone ou en visio. Vous regardez la maquette dans le bus ou devant votre conjoint. Vous décidez après.</p>
+    <div class="contact-cta-row" data-anim="fade-up">
+      <a href="contact.html" class="btn btn-primary btn-arrow magnetic">Demander ma maquette</a>
+      <a href="tel:+41798353509" class="btn btn-ghost magnetic">+41 79 835 35 09</a>
     </div>
+    <p class="contact-meta" data-anim="fade-up">Une question avant de signer ? Écrivez-moi à <a href="mailto:contact@opus-ia.ch">contact@opus-ia.ch</a> — je réponds en moins de 24 h ouvrées.</p>
   </div>
 </section>
 
-<!-- ═══════════ FOOTER ═══════════ -->
 </main>
 
+<!-- ═══════════ FOOTER ═══════════ -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div>
         <div class="footer-logo">Opus <span>Studio</span></div>
-        <p class="footer-tagline">Sites web premium pour les PME et artisans suisses. Maquette gratuite avant paiement, livré en 14 jours, charter graphique pour chaque métier.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Offres</h4>
-        <ul>
-          <li><a href="services.html#essentiel">Essentiel</a></li>
-          <li><a href="services.html#premium">Premium</a></li>
-          <li><a href="services.html#serenite">Sérénité</a></li>
-          <li><a href="tarifs.html">Tarifs</a></li>
-        </ul>
+        <p class="footer-tagline">Studio de création de sites web sur-mesure pour PME suisses. Code propre, animations cinéma, hébergement Suisse. Basé à Romont (FR).</p>
       </div>
       <div class="footer-col">
         <h4>Studio</h4>
         <ul>
-          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="tarifs.html">Tarifs</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="https://opus-ia.ch" target="_blank" rel="noopener">Opus IA →</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Légal</h4>
         <ul>
           <li><a href="mentions-legales.html">Mentions légales</a></li>
-          <li><a href="politique-confidentialite.html">Confidentialité</a></li>
+          <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Avdyl Bytyqi</h4>
+        <ul>
+          <li><a href="mailto:contact@opus-ia.ch">contact@opus-ia.ch</a></li>
+          <li><a href="tel:+41798353509">+41 79 835 35 09</a></li>
+          <li>Romont (FR) · Suisse</li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Opus Studio · Avdyl Bytyqi · Romont, Suisse</span>
-      <span>Conçu et codé en Suisse 🇨🇭</span>
+      <span>© 2026 Opus Studio · Une marque <a href="https://opus-ia.ch" target="_blank" rel="noopener">Opus IA</a></span>
+      <span>Hébergé en Suisse · Conçu et codé à Romont</span>
     </div>
   </div>
 </footer>
 
 <!-- Sticky mobile CTA -->
 <div class="sticky-cta">
-  <a href="tel:+41798353509" class="ghost">Appeler</a>
-  <a href="contact.html" class="primary">Maquette gratuite</a>
+  <a href="contact.html" class="primary magnetic">Maquette gratuite</a>
 </div>
 
-<!-- GSAP -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
-<script src="script.js"></script>
+<!-- Magnetic cursor follower (desktop only) -->
+<div class="cursor-follower" aria-hidden="true"></div>
 
+<!-- GSAP 3.13 + ScrollTrigger + SplitText via cdnjs -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+<script defer src="script.js"></script>
 </body>
 </html>
