@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Opus Studio | Sites web sur-mesure pour PME suisses — Romont</title>
 <meta name="description" content="Studio de création de sites web sur-mesure pour PME suisses. Code propre, animations cinéma, Lighthouse 95+. Maquette gratuite en 48 h, livré en 14 jours, dès 890 CHF." />
-<meta name="theme-color" content="#0E1116" />
+<meta name="theme-color" content="#0B0E13" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
 
 <meta property="og:type" content="website" />
@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700&family=Instrument+Serif:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
 
 <script type="application/ld+json">
@@ -47,7 +47,8 @@
   "priceRange": "$$",
   "areaServed": "CH",
   "description": "Studio de création de sites web sur-mesure pour PME suisses. Code propre, animations cinéma, Lighthouse 95+. Aucun framework, aucun lock-in.",
-  "founder": { "@type": "Person", "name": "Avdyl Bytyqi" }
+  "founder": { "@type": "Person", "name": "Avdyl Bytyqi" },
+  "parentOrganization": { "@type": "Organization", "name": "Opus IA", "url": "https://opus-ia.ch" }
 }
 </script>
 </head>
@@ -55,23 +56,25 @@
 <body>
 <a class="skip-link" href="#main">Aller au contenu</a>
 
-<!-- Scroll progress bar (anim 10) -->
 <div class="scroll-progress" aria-hidden="true"></div>
 
-<!-- ═══════════ NAV ═══════════ -->
+<!-- ═══════════ NAV (logo carré O + wordmark + .studio italique — clone Opus.ia) ═══════════ -->
 <nav class="nav" id="nav">
-  <a href="index.html" class="nav-logo">Opus <span>Studio</span></a>
+  <a href="index.html" class="nav-logo" aria-label="Opus Studio — accueil">
+    <span class="nav-logo-mark" aria-hidden="true">O</span>
+    <span class="nav-logo-word">Opus<em>.studio</em></span>
+  </a>
   <ul class="nav-links">
     <li><a href="services.html">Services</a></li>
     <li><a href="tarifs.html">Tarifs</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <a href="contact.html" class="nav-cta">Maquette gratuite</a>
+  <a href="contact.html" class="nav-cta">Ma maquette gratuite</a>
   <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false" aria-controls="navMobile"><span></span><span></span><span></span></button>
 </nav>
 
 <div class="nav-mobile" id="navMobile" aria-hidden="true">
-  <a href="contact.html" class="accent">Maquette gratuite</a>
+  <a href="contact.html" class="accent">Ma maquette gratuite</a>
   <a href="services.html">Services</a>
   <a href="tarifs.html">Tarifs</a>
   <a href="contact.html">Contact</a>
@@ -85,16 +88,20 @@
   <div class="hero-grid-overlay" aria-hidden="true"></div>
   <div class="hero-noise" aria-hidden="true"></div>
   <div class="container hero-inner">
-    <span class="eyebrow" data-anim="hero-eyebrow">Studio Romont · Suisse</span>
+    <span class="eyebrow" data-anim="hero-eyebrow">Studio Romont · Suisse romande</span>
     <h1 data-anim="hero-title">Le studio qui code des sites <span class="italic-accent">comme un horloger</span>.</h1>
-    <p class="hero-tagline" data-anim="hero-tag">Sites web sur-mesure pour PME suisses. Code propre, animations cinéma, Lighthouse 95+. Aucun framework, aucun lock-in, aucun bullshit.</p>
+    <p class="hero-tagline" data-anim="hero-tag">Sites web sur-mesure pour PME suisses. Code propre, animations cinéma, Lighthouse 95+. <em class="italic-accent">Aucun framework</em>, aucun lock-in, sans esbroufe.</p>
     <div class="hero-actions" data-anim="hero-actions">
-      <a href="contact.html" class="btn btn-primary btn-arrow magnetic">Maquette gratuite en 48 h</a>
+      <a href="contact.html" class="btn btn-primary btn-arrow shine magnetic">Ma maquette gratuite <span class="arrow">→</span></a>
       <a href="#methode" class="btn btn-ghost magnetic">Voir la méthode</a>
     </div>
+    <p class="hero-proof-line" data-anim="hero-proof-line">
+      <strong>4 / 4</strong> clients ont signé après la maquette.
+    </p>
     <div class="hero-proofs" data-anim="hero-proofs">
       <span>Livré en 14 jours</span>
       <span>Lighthouse 95+ garanti</span>
+      <span>Code source 100 % à vous</span>
       <span>100 % hébergé Suisse</span>
     </div>
   </div>
@@ -110,7 +117,7 @@
     <div class="problem-grid">
       <div class="problem-left">
         <span class="eyebrow" data-anim="fade-up">Le constat</span>
-        <h2 data-anim="title-mask">47 templates Wix indexés à Romont.<br>Aucun ne ressemble à votre métier.</h2>
+        <h2 data-anim="title-mask">47 templates Wix indexés à Romont.<br><span class="italic-accent">Aucun ne ressemble à votre métier.</span></h2>
       </div>
       <div class="problem-right" data-anim="fade-up">
         <p>Les solutions DIY ont rendu le « site web » obligatoire, et accessoirement <strong>indistinguible</strong>. Votre PME mérite mieux qu'un template choisi en cliquant le 3<sup>e</sup> résultat Google.</p>
@@ -147,6 +154,7 @@
       <article class="service-card" data-anim="card-reveal" data-spotlight>
         <div class="tier">Essentiel</div>
         <h3>Le site qui vend.</h3>
+        <p class="tier-tag"><em>la porte d'entrée la plus efficace</em></p>
         <div class="price">890 CHF</div>
         <div class="price-meta">2× (445 + 445) · livré en 14 jours</div>
         <ul class="features">
@@ -158,12 +166,14 @@
           <li>Mentions légales nLPD/RGPD</li>
           <li><strong>Maquette gratuite avant paiement</strong></li>
         </ul>
-        <a href="contact.html?offre=essentiel" class="cta magnetic">Demander ma maquette</a>
+        <a href="contact.html?offre=essentiel" class="cta shine magnetic">Demander ma maquette →</a>
       </article>
 
       <article class="service-card featured" data-anim="card-reveal" data-spotlight>
+        <span class="badge-popular">Le plus choisi</span>
         <div class="tier">Premium</div>
         <h3>Le site complet.</h3>
+        <p class="tier-tag"><em>la profondeur qui dure dix ans</em></p>
         <div class="price">1'990 CHF</div>
         <div class="price-meta">2× (995 + 995) · livré en 21 jours</div>
         <ul class="features">
@@ -175,7 +185,7 @@
           <li>Formation 30 min à la mise à jour</li>
           <li>Support prioritaire 30 j post-livraison</li>
         </ul>
-        <a href="contact.html?offre=premium" class="cta magnetic">Demander ma maquette</a>
+        <a href="contact.html?offre=premium" class="cta shine magnetic">Demander ma maquette →</a>
       </article>
 
     </div>
@@ -184,44 +194,79 @@
   </div>
 </section>
 
-<!-- ═══════════ MÉTHODE (4 étapes) ═══════════ -->
+<!-- ═══════════ MARQUEE infini (stacks tech) ═══════════ -->
+<section class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>HTML</span><span class="marquee-dot">·</span>
+    <span>CSS</span><span class="marquee-dot">·</span>
+    <span>GSAP</span><span class="marquee-dot">·</span>
+    <span>Vanilla JS</span><span class="marquee-dot">·</span>
+    <span class="marquee-em">Made in Romont</span><span class="marquee-dot">·</span>
+    <span>0 framework</span><span class="marquee-dot">·</span>
+    <span>Lighthouse 95+</span><span class="marquee-dot">·</span>
+    <span class="marquee-em">Hébergé en Suisse</span><span class="marquee-dot">·</span>
+    <span>HTML</span><span class="marquee-dot">·</span>
+    <span>CSS</span><span class="marquee-dot">·</span>
+    <span>GSAP</span><span class="marquee-dot">·</span>
+    <span>Vanilla JS</span><span class="marquee-dot">·</span>
+    <span class="marquee-em">Made in Romont</span><span class="marquee-dot">·</span>
+    <span>0 framework</span><span class="marquee-dot">·</span>
+    <span>Lighthouse 95+</span><span class="marquee-dot">·</span>
+    <span class="marquee-em">Hébergé en Suisse</span><span class="marquee-dot">·</span>
+  </div>
+</section>
+
+<!-- ═══════════ MÉTHODE (4 étapes + devtools fake) ═══════════ -->
 <section class="process" id="methode">
   <div class="container">
     <div class="process-header">
       <span class="eyebrow" data-anim="fade-up">La méthode</span>
       <h2 data-anim="title-mask">Quatre étapes. <span class="italic-accent">Aucune surprise.</span></h2>
-      <p data-anim="fade-up">Un protocole testé sur chaque projet livré. Vous savez à chaque instant où vous en êtes — et ce qu'il vous reste à signer.</p>
+      <p data-anim="fade-up">Aucun jargon, aucun cahier des charges à rédiger. Vous savez à chaque instant où vous en êtes — et ce qu'il vous reste à signer.</p>
     </div>
     <div class="process-grid">
       <article class="process-step" data-anim="card-reveal">
         <div class="step-num" data-step-num>01</div>
         <h3>Brief vocal</h3>
-        <p>30 minutes au téléphone ou en visio. Vous racontez votre métier, vos clients, ce que vous détestez sur le web. Aucun jargon, aucun cahier des charges à rédiger.</p>
+        <p>30 minutes au téléphone ou en visio. Vous racontez votre métier, vos clients, ce que vous détestez sur le web.</p>
         <div class="step-meta">Jour 1</div>
       </article>
       <article class="process-step" data-anim="card-reveal">
         <div class="step-num" data-step-num>02</div>
         <h3>Maquette gratuite</h3>
-        <p>Sous 48 h, je vous envoie une maquette interactive. Pas un PDF mort : un lien que vous ouvrez sur mobile, dans le bus, devant votre conjoint. Vous décidez après.</p>
+        <p>Sous 48 h, je vous envoie une maquette interactive. Pas un PDF mort : un lien que vous ouvrez sur mobile, dans le bus, devant votre conjoint.</p>
         <div class="step-meta">Jours 2–4</div>
       </article>
       <article class="process-step" data-anim="card-reveal">
         <div class="step-num" data-step-num>03</div>
         <h3>Build sur-mesure</h3>
-        <p>Je code chaque ligne à la main. HTML, CSS, JS vanilla, GSAP pour les animations. Aucun framework qui pèse 300 KB pour afficher trois cartes.</p>
+        <p>Je code chaque ligne à la main. HTML, CSS, JS vanilla, GSAP pour les animations. Comme ça :</p>
         <div class="step-meta">Jours 5–12</div>
       </article>
       <article class="process-step" data-anim="card-reveal">
         <div class="step-num" data-step-num>04</div>
         <h3>Livraison tenue</h3>
-        <p>Mise en ligne sur votre nom de domaine, formation de 30 min pour mettre à jour vos textes, et le code source 100 % à vous. Si je disparais demain, votre site reste.</p>
+        <p>Mise en ligne, formation 30 min, et le code source 100 % à vous. Si je disparais demain, votre site reste.</p>
         <div class="step-meta">Jour 14 / 21</div>
       </article>
+    </div>
+
+    <!-- DEVTOOLS FAKE — "voici comment je code" (méta-cohérence) -->
+    <div class="devtools-window" data-anim="fade-up">
+      <div class="devtools-header">
+        <span class="devtools-dot red" aria-hidden="true"></span>
+        <span class="devtools-dot yellow" aria-hidden="true"></span>
+        <span class="devtools-dot green" aria-hidden="true"></span>
+        <span class="devtools-title">votre-site.html — Opus Studio</span>
+      </div>
+      <div class="devtools-body">
+        <pre><code id="code-typing"></code><span class="devtools-cursor" aria-hidden="true"></span></pre>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ LE SYSTÈME (innovation tech transparente) ═══════════ -->
+<!-- ═══════════ LE SYSTÈME (sticky stack cards) ═══════════ -->
 <section class="system">
   <div class="container">
     <div class="system-header">
@@ -230,7 +275,7 @@
     </div>
     <div class="system-grid">
       <div class="system-card" data-anim="fade-up" data-spotlight>
-        <div class="system-card-num">~ 0 KB</div>
+        <div class="system-card-num">0 KB</div>
         <h3>Aucun framework</h3>
         <p>Pas de React, Vue, Angular, Next. Le site charge en HTML pur, animé par GSAP. Premier paint en 400 ms sur fibre suisse.</p>
       </div>
@@ -242,7 +287,7 @@
       <div class="system-card" data-anim="fade-up" data-spotlight>
         <div class="system-card-num">∞</div>
         <h3>Pas de lock-in</h3>
-        <p>Le code source est à vous, hébergé chez l'hébergeur de votre choix (Infomaniak Suisse inclus dans Sérénité). Aucune dépendance plateforme.</p>
+        <p>Le code source est à vous, hébergé chez l'hébergeur de votre choix. Infomaniak Suisse inclus dans Sérénité.</p>
       </div>
       <div class="system-card" data-anim="fade-up" data-spotlight>
         <div class="system-card-num">10 ans</div>
@@ -253,7 +298,7 @@
   </div>
 </section>
 
-<!-- ═══════════ TÉMOIGNAGES (4 clients, sans captures) ═══════════ -->
+<!-- ═══════════ TÉMOIGNAGES ═══════════ -->
 <section class="testimonials">
   <div class="container">
     <div class="testimonials-header">
@@ -270,7 +315,7 @@
         <div class="testimonial-mark">"</div>
         <p class="testimonial-quote">Site livré en 10 jours, fiche Google récupérée en bonus. On a rempli un samedi soir pour la première fois en deux ans.</p>
         <div class="testimonial-author">
-          <strong>Murat</strong> · Restaurant La Forge, Romont
+          <strong>Murat</strong> <span class="dot">·</span> Restaurant La Forge <span class="dot">·</span> <em>Romont</em>
         </div>
       </article>
 
@@ -278,7 +323,7 @@
         <div class="testimonial-mark">"</div>
         <p class="testimonial-quote">Avdyl parle français et comprend le métier. Pas de jargon, pas de réunions qui durent trois heures. Trois itérations propres et c'est en ligne.</p>
         <div class="testimonial-author">
-          <strong>TOFAJ Echafaudages</strong> · Romont
+          <strong>TOFAJ Echafaudages</strong> <span class="dot">·</span> <em>Romont</em>
         </div>
       </article>
 
@@ -286,7 +331,7 @@
         <div class="testimonial-mark">"</div>
         <p class="testimonial-quote">Le site charge instantanément même sur le chantier en 4G. Mes clients le voient sur leur Samsung sans souci. C'est exactement ce que je demandais.</p>
         <div class="testimonial-author">
-          <strong>Natursteine Wüst AG</strong> · Suisse alémanique
+          <strong>Natursteine Wüst AG</strong> <span class="dot">·</span> <em>Suisse alémanique</em>
         </div>
       </article>
 
@@ -294,7 +339,7 @@
         <div class="testimonial-mark">"</div>
         <p class="testimonial-quote">Le rendu architectural est précis et propre, exactement le ton qu'on voulait. Délai tenu au jour près, code source remis comme convenu.</p>
         <div class="testimonial-author">
-          <strong>Module SA</strong> · Architectures
+          <strong>Module SA</strong> <span class="dot">·</span> <em>Architectures</em>
         </div>
       </article>
 
@@ -302,7 +347,7 @@
   </div>
 </section>
 
-<!-- ═══════════ PRICING (3 cards anchoring haut) ═══════════ -->
+<!-- ═══════════ PRICING STRIP ═══════════ -->
 <section class="pricing-strip">
   <div class="container">
     <div class="pricing-strip-header">
@@ -360,7 +405,7 @@
       </details>
       <details class="faq-item">
         <summary>Vous êtes seul ?</summary>
-        <p>Oui. Avdyl Bytyqi, basé à Romont (FR). Cela signifie : un seul interlocuteur du brief à la livraison, pas de chef de projet intermédiaire, des décisions prises en quelques heures et non en réunions. Et un planning de 2-3 projets en parallèle maximum, pour tenir les délais annoncés.</p>
+        <p>Oui. Avdyl Bytyqi, basé à Romont (FR), ancien CFC sanitaire reconverti dev. Cela signifie : un seul interlocuteur du brief à la livraison, pas de chef de projet intermédiaire, des décisions prises en quelques heures et non en réunions. Et un planning de 2-3 projets en parallèle maximum, pour tenir les délais annoncés.</p>
       </details>
     </div>
   </div>
@@ -373,7 +418,7 @@
     <h2 data-anim="title-mask">Votre maquette, <span class="italic-accent">gratuite en 48 h</span>.</h2>
     <p class="contact-lead" data-anim="fade-up">Brief de 30 minutes au téléphone ou en visio. Vous regardez la maquette dans le bus ou devant votre conjoint. Vous décidez après.</p>
     <div class="contact-cta-row" data-anim="fade-up">
-      <a href="contact.html" class="btn btn-primary btn-arrow magnetic">Demander ma maquette</a>
+      <a href="contact.html" class="btn btn-primary btn-arrow shine magnetic">Ma maquette gratuite <span class="arrow">→</span></a>
       <a href="tel:+41798353509" class="btn btn-ghost magnetic">+41 79 835 35 09</a>
     </div>
     <p class="contact-meta" data-anim="fade-up">Une question avant de signer ? Écrivez-moi à <a href="mailto:contact@opus-ia.ch">contact@opus-ia.ch</a> — je réponds en moins de 24 h ouvrées.</p>
@@ -382,12 +427,15 @@
 
 </main>
 
-<!-- ═══════════ FOOTER ═══════════ -->
+<!-- ═══════════ FOOTER (avec signature "Une marque Opus IA") ═══════════ -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-logo">Opus <span>Studio</span></div>
+        <a href="index.html" class="footer-logo" aria-label="Opus Studio — accueil">
+          <span class="nav-logo-mark" aria-hidden="true">O</span>
+          <span class="nav-logo-word">Opus<em>.studio</em></span>
+        </a>
         <p class="footer-tagline">Studio de création de sites web sur-mesure pour PME suisses. Code propre, animations cinéma, hébergement Suisse. Basé à Romont (FR).</p>
       </div>
       <div class="footer-col">
@@ -406,7 +454,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Avdyl Bytyqi</h4>
+        <h4>Contact</h4>
         <ul>
           <li><a href="mailto:contact@opus-ia.ch">contact@opus-ia.ch</a></li>
           <li><a href="tel:+41798353509">+41 79 835 35 09</a></li>
@@ -414,22 +462,35 @@
         </ul>
       </div>
     </div>
+
+    <!-- Identité business + signature Opus IA -->
+    <div class="footer-identity">
+      <a href="https://opus-ia.ch" class="parent-mark" target="_blank" rel="noopener">
+        <span class="parent-mark-square" aria-hidden="true">O</span>
+        <span>Une marque <strong class="gold-link">Opus IA</strong></span>
+      </a>
+      <span class="dot">·</span>
+      <span>Avdyl Bytyqi · Raison individuelle</span>
+      <span class="dot">·</span>
+      <span>1680 Romont (FR) · Suisse</span>
+    </div>
+
     <div class="footer-bottom">
-      <span>© 2026 Opus Studio · Une marque <a href="https://opus-ia.ch" target="_blank" rel="noopener">Opus IA</a></span>
-      <span>Hébergé en Suisse · Conçu et codé à Romont</span>
+      <span>© 2026 Opus Studio · Conçu et codé à Romont</span>
+      <span class="status-pulse"><span class="pulse" aria-hidden="true"></span> Hébergé en Suisse · Conforme nLPD</span>
     </div>
   </div>
 </footer>
 
 <!-- Sticky mobile CTA -->
 <div class="sticky-cta">
-  <a href="contact.html" class="primary magnetic">Maquette gratuite</a>
+  <a href="contact.html" class="primary magnetic">Ma maquette gratuite →</a>
 </div>
 
-<!-- Magnetic cursor follower (desktop only) -->
+<!-- Cursor follower (desktop only) -->
 <div class="cursor-follower" aria-hidden="true"></div>
 
-<!-- GSAP 3.13 + ScrollTrigger + SplitText via cdnjs -->
+<!-- GSAP 3.13 -->
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
