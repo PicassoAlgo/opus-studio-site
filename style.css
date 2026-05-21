@@ -542,6 +542,13 @@ section { padding: clamp(6rem, 13vw, 9rem) 0; position: relative; }
   width: 12px; height: 1px; background: var(--accent);
 }
 .service-card .features li strong { color: var(--text); font-weight: 500; }
+
+/* Carte « Sur-mesure » discrète (effet d'ancrage de prix) */
+.service-card.subtle { background: transparent; border-style: dashed; }
+/* Lignes désactivées de la table comparative */
+.service-card .features li.disabled { color: var(--text-muted); opacity: 0.55; text-decoration: line-through; }
+.service-card .features li.disabled::before { background: var(--text-muted); }
+
 .service-card .cta {
   display: block;
   text-align: center;
@@ -567,6 +574,24 @@ section { padding: clamp(6rem, 13vw, 9rem) 0; position: relative; }
 }
 .services-note a { color: var(--accent-2); border-bottom: 1px solid transparent; transition: border-color .3s; }
 .services-note a:hover { border-color: var(--accent-2); }
+
+/* Bandeau garantie maquette (réassurance anti-risque près des prix) */
+.services-guarantee {
+  display: inline-block;
+  margin: 1.6rem auto 0;
+  padding: 0.7rem 1.5rem;
+  border: 1px solid var(--border-hi);
+  border-radius: var(--radius-pill);
+  background: var(--accent-soft);
+  font-size: 0.92rem;
+  color: var(--text-soft);
+}
+.services-guarantee strong { color: var(--text); font-weight: 600; }
+.services-guarantee .check { color: var(--accent-2); font-weight: 700; }
+
+/* Icônes des cartes de la section Visibilité Google + IA */
+.viz-icon { width: 34px; height: 34px; color: var(--accent-2); margin-bottom: 0.7rem; }
+.viz-icon svg { width: 100%; height: 100%; display: block; }
 
 /* ═══════════════════════════════════════════════════════════════
    PROCESS (4 étapes) + DEVTOOLS FAKE (méta-cohérence)
@@ -942,8 +967,17 @@ section { padding: clamp(6rem, 13vw, 9rem) 0; position: relative; }
 .page-header {
   padding: clamp(7rem, 14vw, 10rem) 0 clamp(3rem, 6vw, 5rem);
   position: relative;
+  overflow: hidden;
   border-bottom: 1px solid var(--border);
 }
+.page-header::before {
+  content: ""; position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(ellipse 70% 85% at 22% 0%, rgba(74, 143, 255, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 92% 8%, rgba(201, 169, 97, 0.05) 0%, transparent 55%);
+  pointer-events: none;
+}
+.page-header .container { position: relative; z-index: 1; }
 .page-header h1 { font-size: clamp(2.4rem, 6vw, 4.5rem); margin: 1rem 0 1.2rem; max-width: 18ch; }
 .page-header p { max-width: 60ch; color: var(--text-soft); font-size: 1.05rem; }
 .contact-grid {

@@ -158,17 +158,20 @@
   document.querySelectorAll('[data-anim="title-mask"]').forEach(function (el) {
     gsap.set(el, { opacity: 1 });
     const s = splitLinesMask(el);
+    // Élément déjà visible au chargement (ex : H1 d'en-tête de page interne) →
+    // animation immédiate, sinon le ScrollTrigger ne se déclenche jamais et le
+    // titre resterait masqué (yPercent 110).
+    const inView = el.getBoundingClientRect().top < window.innerHeight * 0.85;
     if (s && s.lines) {
       gsap.set(s.lines, { yPercent: 110 });
-      gsap.to(s.lines, {
-        scrollTrigger: { trigger: el, start: 'top 85%' },
-        yPercent: 0, duration: 1.0, stagger: 0.08, ease: 'expo.out'
-      });
+      const vars = { yPercent: 0, duration: 1.0, stagger: 0.08, ease: 'expo.out' };
+      if (inView) { vars.delay = 0.2; }
+      else { vars.scrollTrigger = { trigger: el, start: 'top 85%' }; }
+      gsap.to(s.lines, vars);
     } else {
-      gsap.from(el, {
-        scrollTrigger: { trigger: el, start: 'top 85%' },
-        y: 36, opacity: 0, duration: 0.85, ease: 'power3.out'
-      });
+      const vars = { y: 36, opacity: 0, duration: 0.85, ease: 'power3.out' };
+      if (!inView) { vars.scrollTrigger = { trigger: el, start: 'top 85%' }; }
+      gsap.from(el, vars);
     }
   });
 
@@ -182,11 +185,11 @@
   });
 
   /* ─────────── 9. CARDS reveal ─────────── */
-  document.querySelectorAll('[data-anim="card-reveal"]').forEach(function (el, i) {
+  document.querySelectorAll('[data-anim="card-reveal"]').forEach(function (el) {
     gsap.set(el, { opacity: 1 });
     gsap.from(el, {
       scrollTrigger: { trigger: el, start: 'top 88%' },
-      y: 40, opacity: 0, duration: 0.85, delay: (i % 4) * 0.08, ease: 'power3.out'
+      y: 40, opacity: 0, duration: 0.85, ease: 'power3.out'
     });
   });
 
@@ -233,27 +236,32 @@
   document.querySelectorAll('[data-step-num]').forEach(function (el) {
     const final = parseInt(el.textContent.trim(), 10);
     if (Number.isNaN(final)) return;
+    let played = false;
+    function runStep() {
+      if (played) return;
+      played = true;
+      const targetStr = String(final).padStart(2, '0');
+      const chars = '0123456789';
+      let frame = 0;
+      const totalFrames = 16;
+      function tick() {
+        if (frame < totalFrames) {
+          const scrambled = Array.from(targetStr).map(function (c, i) {
+            return i < frame * targetStr.length / totalFrames ? c : chars[Math.floor(Math.random() * 10)];
+          }).join('');
+          el.textContent = scrambled;
+          frame++;
+          requestAnimationFrame(tick);
+        } else {
+          el.textContent = targetStr;
+        }
+      }
+      tick();
+    }
     ScrollTrigger.create({
       trigger: el, start: 'top 85%', once: true,
-      onEnter: function () {
-        const targetStr = String(final).padStart(2, '0');
-        const chars = '0123456789';
-        let frame = 0;
-        const totalFrames = 16;
-        function tick() {
-          if (frame < totalFrames) {
-            const scrambled = Array.from(targetStr).map(function (c, i) {
-              return i < frame * targetStr.length / totalFrames ? c : chars[Math.floor(Math.random() * 10)];
-            }).join('');
-            el.textContent = scrambled;
-            frame++;
-            requestAnimationFrame(tick);
-          } else {
-            el.textContent = targetStr;
-          }
-        }
-        tick();
-      }
+      onEnter: runStep,
+      onRefresh: function (self) { if (self.progress > 0) runStep(); }
     });
   });
 
