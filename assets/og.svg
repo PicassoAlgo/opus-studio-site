@@ -1,53 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Opus Studio — Sites web premium pour PME suisses">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Opus Studio — Création de sites web pour PME suisses">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0E1116"/>
-      <stop offset="1" stop-color="#161B22"/>
+      <stop offset="0" stop-color="#0B0E13"/>
+      <stop offset="1" stop-color="#13171F"/>
     </linearGradient>
-    <radialGradient id="glow" cx="78%" cy="22%" r="55%">
-      <stop offset="0" stop-color="#2F81F7" stop-opacity="0.35"/>
-      <stop offset="1" stop-color="#2F81F7" stop-opacity="0"/>
+    <radialGradient id="glow" cx="82%" cy="18%" r="62%">
+      <stop offset="0" stop-color="#4A8FFF" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#4A8FFF" stop-opacity="0"/>
     </radialGradient>
-    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
-      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#21262D" stroke-width="1"/>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M 56 0 L 0 0 0 56" fill="none" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="1"/>
     </pattern>
   </defs>
 
   <rect width="1200" height="630" fill="url(#bg)"/>
-  <rect width="1200" height="630" fill="url(#grid)" opacity="0.4"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
   <rect width="1200" height="630" fill="url(#glow)"/>
 
-  <!-- Marque -->
-  <g transform="translate(80, 96)">
-    <text x="0" y="0" font-family="-apple-system, 'Space Grotesk', sans-serif" font-size="36" font-weight="700" fill="#E6EDF3" letter-spacing="-1">
-      Opus <tspan fill="#2F81F7">Studio</tspan>
-    </text>
-    <text x="0" y="32" font-family="-apple-system, Inter, sans-serif" font-size="18" fill="#8B949E" letter-spacing="2" text-transform="uppercase">
-      ROMONT · SUISSE
-    </text>
+  <!-- Marque Opus.studio -->
+  <g transform="translate(80, 110)">
+    <rect x="0" y="-27" width="42" height="42" rx="12" fill="#4A8FFF"/>
+    <text x="21" y="1" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF" text-anchor="middle">O</text>
+    <text x="58" y="3" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="27" font-weight="600" fill="#FAFAF7" letter-spacing="-0.5">Opus<tspan font-style="italic" fill="#6FA8FF">.studio</tspan></text>
   </g>
 
   <!-- Headline -->
-  <g transform="translate(80, 280)">
-    <text font-family="-apple-system, 'Space Grotesk', sans-serif" font-size="88" font-weight="700" fill="#E6EDF3" letter-spacing="-3" line-height="1">
-      <tspan x="0" dy="0">Un site qui</tspan>
-      <tspan x="0" dy="100" font-style="italic" fill="#2F81F7">vous ressemble.</tspan>
+  <g transform="translate(80, 300)">
+    <text font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="76" font-weight="700" fill="#FAFAF7" letter-spacing="-2.5">
+      <tspan x="0" dy="0">Vous gérez votre métier.</tspan>
+      <tspan x="0" dy="92" font-style="italic" font-weight="400" fill="#6FA8FF">On gère votre site.</tspan>
     </text>
   </g>
 
-  <!-- Sub-line + CTA chip -->
-  <g transform="translate(80, 540)">
-    <text font-family="-apple-system, Inter, sans-serif" font-size="22" fill="#8B949E">
-      Maquette gratuite en 48 h · Livré en 14 jours · Dès 890 CHF
+  <!-- Sous-ligne -->
+  <g transform="translate(80, 552)">
+    <text font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="24" fill="#A8B0BC">
+      Création de sites web pour PME suisses · Maquette gratuite · dès 890 CHF
     </text>
   </g>
 
-  <!-- Coin chip "STUDIO" -->
-  <g transform="translate(1000, 80)">
-    <rect width="120" height="32" rx="16" fill="#2F81F7" opacity="0.15"/>
-    <rect width="120" height="32" rx="16" fill="none" stroke="#2F81F7" stroke-width="1"/>
-    <text x="60" y="22" font-family="-apple-system, Inter, sans-serif" font-size="14" font-weight="600" fill="#58A6FF" text-anchor="middle" letter-spacing="2">
-      STUDIO
-    </text>
+  <!-- Chip coin -->
+  <g transform="translate(998, 86)">
+    <rect width="122" height="34" rx="17" fill="#4A8FFF" fill-opacity="0.15"/>
+    <rect width="122" height="34" rx="17" fill="none" stroke="#4A8FFF" stroke-opacity="0.5" stroke-width="1"/>
+    <text x="61" y="23" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#6FA8FF" text-anchor="middle" letter-spacing="2">STUDIO</text>
   </g>
 </svg>

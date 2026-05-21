@@ -215,9 +215,18 @@
 
   document.querySelectorAll('[data-counter]').forEach(function (el) {
     const target = parseFloat(el.getAttribute('data-counter')) || 0;
+    let played = false;
+    function play() {
+      if (played) return;
+      played = true;
+      scrambleNumber(el, target);
+    }
     ScrollTrigger.create({
-      trigger: el, start: 'top 90%', once: true,
-      onEnter: function () { scrambleNumber(el, target); }
+      trigger: el, start: 'top 85%', once: true,
+      onEnter: play,
+      // Filet : si la section est déjà franchie au refresh (load / polices /
+      // restauration de scroll), onEnter ne se rejoue pas → on force ici.
+      onRefresh: function (self) { if (self.progress > 0) play(); }
     });
   });
 
@@ -413,5 +422,10 @@
   window.addEventListener('load', function () {
     ScrollTrigger.refresh();
   });
+  /* Refresh après chargement des polices — Bricolage Grotesque change la
+     hauteur des lignes et décale les positions de déclenchement. */
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(function () { ScrollTrigger.refresh(); });
+  }
 
 })();
